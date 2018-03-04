@@ -39,13 +39,17 @@
 						<p>Page Not Found</p>
 						<h2>404</h2>
 						<h2>Page will automatically redirect in 5 seconds</h2>
-						<script type="text/javascript">
-							(function(){
-							   setTimeout(function(){
-							     window.location="http://halfpint236.com/";
-							   },3000); /* 1000 = 1 second*/
-							})();
-						</script>
+						    <div id="counter">5</div>
+						    <script>
+							setInterval(function() {
+							    var div = document.querySelector("#counter");
+							    var count = div.textContent * 1 - 1;
+							    div.textContent = count;
+							    if (count <= 0) {
+								window.location.href="https://example.com";
+							    }
+							}, 1000);
+						    </script>
 					<a href="https://www.halfpint236.com" class="button alt">Home</a>
 					<a href="https://www.halfpint236.com/gear" class="button alt">Gear</a>
 					<a href="https://www.halfpint236.com/music" class="button alt">Music</a>
